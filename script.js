@@ -12,16 +12,32 @@ var lowerCase = confirm("Would you like to use lowercaser letters?");
 var numbers = confirm("Would you like to use numbers?")
 var symbols = confirm("Would you like to use special characters?")
 
-
+//storing the values of user inputs into this array
+var array = [upperCase, lowerCase, numbers, symbols];
+console.log(array);
 
 // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+// }
+var char = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var num = '0123456789';
+var sym = '!@#$%^&*=-_';
+
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  var retVal = "";
+  for (var i = 0, n = char.length; i < length; ++i) {
+      retVal += char.charAt(Math.floor(Math.random() * n));
+      console.log(retVal);
+  }
+  ;
+  return retVal;
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
