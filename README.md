@@ -12,6 +12,6 @@ This system will enforce some predefined criteria:
 - If the user does not want to walk through the prompts they can hit cancel on the first screen
 
 This project was built with HTML, CSS, and JavaScript
-![tech stack](./images/html-css-js.png)
+![alt tech stack](./images/html-css-js.png)
 
 ## Screenshots
