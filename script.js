@@ -38,7 +38,16 @@ var generateBtn = document.querySelector("#generate");
     pwdChars = pwdChars.concat(alphaLower)
   }
 
+  // Declaring variable for the new password
+  var newPassword = ""
 
+      // looping through the stored length and assigning random characters based on pwdChars array
+       for (var i = 0; i < confirmLength; i++) {
+         newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
+       }
+       
+  // Testing the output
+  console.log(newPassword)     
   console.log(pwdChars);
 
 
