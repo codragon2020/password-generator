@@ -6,7 +6,7 @@ function generatePassword() {
 
   var confirmLength = prompt("How many characters would you like to use? \nNote: Must be at least 8 and no more than 128.");
   
-  //break out of the function early
+  // Break out of the function early
   if (confirmLength === null) {
     return;
   } 
