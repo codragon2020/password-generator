@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Function to Generate Password when button is clicked
 function generatePassword() {
 
-  var confirmLength = prompt("How many characters would you like to use?");
+  var confirmLength = prompt("How many characters would you like to use? \nNote: Must be at least 8 and no more than 128.");
     while (confirmLength < 8 || confirmLength > 128) {
       alert("Length must be at least 8 characters and no more than 128 characters!");
       var confirmLength = prompt("How many characters would you like to use?");
@@ -64,7 +64,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  
+
 }
 
 // Add event listener to generate button
