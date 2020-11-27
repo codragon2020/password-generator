@@ -38,6 +38,14 @@ var generateBtn = document.querySelector("#generate");
     pwdChars = pwdChars.concat(alphaLower)
   }
 
+  if (numbers) {
+    pwdChars = pwdChars.concat(number)
+  }
+
+  if (symbols) {
+    pwdChars = pwdChars.concat(specialChar)
+  }
+
   // Declaring variable for the new password
   var newPassword = ""
 
