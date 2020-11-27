@@ -57,7 +57,7 @@ function generatePassword() {
        for (var i = 0; i < confirmLength; i++) {
          newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
        }
-       
+       return newPassword;
       
   // Testing the output
   console.log(newPassword)     
