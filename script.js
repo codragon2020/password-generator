@@ -29,7 +29,6 @@ function generatePassword() {
   var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
 
-
   var pwdChars = []
 
   // If statements will concatenate the different arrays IF confirm method is TRUE otherwise will not concatenate
@@ -52,17 +51,12 @@ function generatePassword() {
 
   // Declaring variable for the new password
   var newPassword = ""
-
-      // looping through the stored length and assigning random characters based on pwdChars array
-       for (var i = 0; i < confirmLength; i++) {
-         newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
-       }
-       return newPassword;
-      
-  // Testing the output
-  console.log(newPassword)     
-  console.log(pwdChars);
-      }
+    // looping through the stored length and assigning random characters based on pwdChars array
+    for (var i = 0; i < confirmLength; i++) {
+        newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
+    }
+      return newPassword;
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -70,7 +64,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  
 }
 
 // Add event listener to generate button
