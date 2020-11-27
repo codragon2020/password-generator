@@ -5,11 +5,20 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 
   var confirmLength = prompt("How many characters would you like to use? \nNote: Must be at least 8 and no more than 128.");
-    while (confirmLength < 8 || confirmLength > 128) {
-      alert("Length must be at least 8 characters and no more than 128 characters!");
+  
+  //break out of the function early
+  if (confirmLength === null) {
+    return;
+  } 
+  
+  // Check that the 8 to 128 condition is met
+  while (confirmLength < 8 || confirmLength > 128) {
+      
+    alert("Length must be at least 8 characters and no more than 128 characters!");
       var confirmLength = prompt("How many characters would you like to use?");
+      
     }
-
+     
       var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
       var lowerCase = confirm("Click OK to confirm you would like to use lowercase letters?");
       var numbers = confirm("Click OK to confirm you would like to use numbers?");
