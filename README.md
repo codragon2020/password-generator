@@ -8,6 +8,10 @@ In this repository, I created an interface that allows users to generate their o
 
 This system will enforce some predefined criteria:
 - Secure passwords should be at least 8 characters in length
-- Use uppercase, lowercase, numeric, and/or special characters
+- Use of uppercase, lowercase, numeric, and/or special characters
+- If the user does not want to walk through the prompts they can hit cancel on the first screen
+
+This project was built with HTML, CSS, and JavaScript
+![tech stack](./images/html-css-js.png)
 
 ## Screenshots
