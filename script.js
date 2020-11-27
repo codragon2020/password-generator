@@ -10,27 +10,26 @@ function generatePassword() {
   if (confirmLength === null) {
     return;
   } 
-  
+
   // Check that the 8 to 128 condition is met
   while (confirmLength < 8 || confirmLength > 128) {
-      
     alert("Length must be at least 8 characters and no more than 128 characters!");
       var confirmLength = prompt("How many characters would you like to use?");
-      
     }
      
-      var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
-      var lowerCase = confirm("Click OK to confirm you would like to use lowercase letters?");
-      var numbers = confirm("Click OK to confirm you would like to use numbers?");
-      var symbols = confirm("Click OK to confirm you would like to use special characters?");
+  var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
+  var lowerCase = confirm("Click OK to confirm you would like to use lowercase letters?");
+  var numbers = confirm("Click OK to confirm you would like to use numbers?");
+  var symbols = confirm("Click OK to confirm you would like to use special characters?");
 
-    while(upperCase === false && lowerCase === false && symbols === false && numbers === false) {
-      alert("You must choose at least one parameter");
-      var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
-      var lowerCase = confirm("Click OK to confirm you would like to use lowercase letters?");
-      var numbers = confirm("Click OK to confirm you would like to use numbers?");
-      var symbols = confirm("Click OK to confirm you would like to use special characters?");
-    };
+  // Checking that at least one option is selected otherwise alerting the user of the same prompts
+  while(!upperCase && !lowerCase && !symbols && !numbers) {
+    alert("You must choose at least one parameter");
+    var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
+    var lowerCase = confirm("Click OK to confirm you would like to use lowercase letters?");
+    var numbers = confirm("Click OK to confirm you would like to use numbers?");
+    var symbols = confirm("Click OK to confirm you would like to use special characters?");
+  };
 
   // Arrays to be used
   var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -60,11 +59,12 @@ function generatePassword() {
 
   // Declaring variable for the new password
   var newPassword = ""
-    // looping through the stored length and assigning random characters based on pwdChars array
-    for (var i = 0; i < confirmLength; i++) {
-        newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
-    }
-      return newPassword;
+    
+  // looping through the stored length and assigning random characters based on pwdChars array
+  for (var i = 0; i < confirmLength; i++) {
+      newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
+  }
+    return newPassword;
 }
 
 // Write password to the #password input
