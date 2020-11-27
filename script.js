@@ -30,6 +30,7 @@ var generateBtn = document.querySelector("#generate");
 
   var pwdChars = []
 
+  // If statements will concatenate the different arrays IF confirm method is TRUE otherwise will not concatenate
   if (upperCase) {
     pwdChars = pwdChars.concat(alphaUpper)
   }
