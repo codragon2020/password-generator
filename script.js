@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 // Function to Generate Password when button is clicked
+function generatePassword() {
 
   var confirmLength = prompt("How many characters would you like to use?");
     while (confirmLength < 8 || confirmLength > 128) {
@@ -28,13 +29,15 @@ var generateBtn = document.querySelector("#generate");
   var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
 
+
   var pwdChars = []
 
   // If statements will concatenate the different arrays IF confirm method is TRUE otherwise will not concatenate
+  // Need to make this less redundant 
   if (upperCase) {
     pwdChars = pwdChars.concat(alphaUpper)
   }
-
+ 
   if (lowerCase) {
     pwdChars = pwdChars.concat(alphaLower)
   }
@@ -55,10 +58,11 @@ var generateBtn = document.querySelector("#generate");
          newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
        }
        
+      
   // Testing the output
   console.log(newPassword)     
   console.log(pwdChars);
-
+      }
 
 // Write password to the #password input
 function writePassword() {
