@@ -1,17 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var alphaUpper = arrayFromLowToHigh(65, 90)
-var alphaLower = arrayFromLowToHigh(97, 122)
-var number = arrayFromLowToHigh(48, 57)
-var specialChar = arrayFromLowToHigh(33, 47).concat(
-  arrayFromLowToHigh(58, 64)
-  ).concat(
-    arrayFromLowToHigh(91, 96)
-  ).concat(
-    arrayFromLowToHigh(123, 126)
-  )
-
 // Function to Generate Password when button is clicked
 function generatePassword() {
 
@@ -37,9 +26,17 @@ function generatePassword() {
     var symbols = confirm("Click OK to confirm you would like to use special characters?");
   };
 
+  // Arrays to be used
+  var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+
+  var pwdChars = []
+ 
   // If statements will concatenate the different arrays IF confirm method is TRUE otherwise will not concatenate
   // Need to make this less redundant 
-
+  
   if (upperCase) {
     pwdChars = pwdChars.concat(alphaUpper)
   }
@@ -57,29 +54,13 @@ function generatePassword() {
   }
 
   // Declaring variable for the new password
-  var newPassword = []
-  console.log(newPassword) //should be empty
-
-  // looping through the stored length and assigning random characters based on pwdChars array
-  for (let i = 0; i < confirmLength; i++) {
-      const characterCode = pwdChars[Math.floor(Math.random() * pwdChars.length)]
-      newPassword.push(String.fromCharCode(characterCode))
-  }
-    console.log(confirmLength)  
-    // console.log(pwdChars)
-    console.log(newPassword)
-    return newPassword.join('');
+  var newPassword = ""
     
-}
-
-
-var pwdChars = []
-function arrayFromLowToHigh(low, high) {
-  const pwdChars = []
-  for (let i = low; i <= high; i++) {
-    pwdChars.push(i)
+  // looping through the stored length and assigning random characters based on pwdChars array
+  for (var i = 0; i < confirmLength; i++) {
+      newPassword = newPassword + pwdChars[Math.floor(Math.random() * pwdChars.length)];
   }
-  return pwdChars
+    return newPassword;
 }
 
 // Write password to the #password input
