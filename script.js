@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Credit goes to https://www.youtube.com/watch?v=iKo9pDKKHnc for the idea
 var alphaUpper = arrayFromLowToHigh(65, 90)
 var alphaLower = arrayFromLowToHigh(97, 122)
 var number = arrayFromLowToHigh(48, 57)
@@ -39,7 +40,6 @@ function generatePassword() {
 
   // If statements will concatenate the different arrays IF confirm method is TRUE otherwise will not concatenate
   // Need to make this less redundant 
-
   if (upperCase) {
     pwdChars = pwdChars.concat(alphaUpper)
   }
@@ -58,21 +58,16 @@ function generatePassword() {
 
   // Declaring variable for the new password
   var newPassword = []
-  console.log(newPassword) //should be empty
 
   // looping through the stored length and assigning random characters based on pwdChars array
   for (let i = 0; i < confirmLength; i++) {
       const characterCode = pwdChars[Math.floor(Math.random() * pwdChars.length)]
       newPassword.push(String.fromCharCode(characterCode))
   }
-    console.log(confirmLength)  
-    // console.log(pwdChars)
-    console.log(newPassword)
     return newPassword.join('');
-    
 }
 
-
+// Function to create the pwdChars array with the arrayFromLowToHigh options
 var pwdChars = []
 function arrayFromLowToHigh(low, high) {
   const pwdChars = []
