@@ -90,6 +90,7 @@ function writePassword() {
 }
 
 // Function to copy password to clipboard
+// Credit for solution goes to https://www.youtube.com/watch?v=9sT03jEwcaw&feature=youtu.be
 function copyPassword() {
   document.getElementById("password").select();
   document.execCommand("Copy");
