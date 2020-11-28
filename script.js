@@ -17,14 +17,9 @@ function generatePassword() {
       var confirmLength = prompt("How many characters would you like to use?");
     }
      
-  var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
-  var lowerCase = confirm("Click OK to confirm you would like to use lowercase letters?");
-  var numbers = confirm("Click OK to confirm you would like to use numbers?");
-  var symbols = confirm("Click OK to confirm you would like to use special characters?");
-
   // Checking that at least one option is selected otherwise alerting the user of the same prompts
   while(!upperCase && !lowerCase && !symbols && !numbers) {
-    alert("You must choose at least one parameter");
+    alert("Choose your password criteria. Uppercase, lowercase, numbers, and symbols are acceptable.");
     var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
     var lowerCase = confirm("Click OK to confirm you would like to use lowercase letters?");
     var numbers = confirm("Click OK to confirm you would like to use numbers?");
