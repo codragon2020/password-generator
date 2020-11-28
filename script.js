@@ -2,6 +2,7 @@
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var copyBtn = document.querySelector("#copy");
 
 
 var alphaUpper = arrayFromLowToHigh(65, 90)
@@ -88,5 +89,15 @@ function writePassword() {
 
 }
 
+// Function to copy password to clipboard
+function copyPassword() {
+  document.getElementById("password").select();
+  document.execCommand("Copy");
+  alert("Password was copied to clipboard!")
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Add event listener to copy password
+copyBtn.addEventListener("click", copyPassword);
