@@ -11,13 +11,13 @@ function generatePassword() {
     return;
   } 
 
-  // Check that the 8 to 128 condition is met
+  // Password Length Checker. Checks that the 8 to 128 condition is met
   while (confirmLength < 8 || confirmLength > 128) {
     alert("Length must be at least 8 characters and no more than 128 characters!");
       var confirmLength = prompt("How many characters would you like to use?");
     }
      
-  // Checking that at least one option is selected otherwise alerting the user of the same prompts
+  // Password Criteria Checker. Checks that at least one option is selected
   while(!upperCase && !lowerCase && !symbols && !numbers) {
     alert("Choose your password criteria. Uppercase, lowercase, numbers, and symbols are acceptable.");
     var upperCase = confirm("Click OK to confirm you would like to use UPPERCASE letters?");
