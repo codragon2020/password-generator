@@ -1,3 +1,5 @@
+// This script was my first attempt at completing the project
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 

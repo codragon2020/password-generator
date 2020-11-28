@@ -1,7 +1,9 @@
+// Credit goes to https://www.youtube.com/watch?v=iKo9pDKKHnc for the idea on using String.fromCharCode
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Credit goes to https://www.youtube.com/watch?v=iKo9pDKKHnc for the idea
+
 var alphaUpper = arrayFromLowToHigh(65, 90)
 var alphaLower = arrayFromLowToHigh(97, 122)
 var number = arrayFromLowToHigh(48, 57)
