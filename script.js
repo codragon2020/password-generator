@@ -1,3 +1,4 @@
+// Password Generator created by Jason McGinthy
 // Credit goes to https://www.youtube.com/watch?v=iKo9pDKKHnc for the idea on using String.fromCharCode
 
 // Assignment Code
